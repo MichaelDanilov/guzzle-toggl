@@ -1224,8 +1224,11 @@
                     "properties": {
                         "admin": {
                             "type": "boolean",
-                            "required": true,
                             "description": "if user is workspace admin (boolean)"
+                        },
+                        "inactive": {
+                            "type": "boolean",
+                            "description": "if user is active (boolean)"
                         }
                     }
                 }
@@ -1241,6 +1244,19 @@
                     "type": "integer",
                     "required": true,
                     "description": "Workspace User ID"
+                }
+            }
+        },
+        "GetWorkspaceWorkspaceUsers": {
+            "httpMethod": "GET",
+            "uri": "workspaces/{id}/workspace_users",
+            "summary": "Get workspace users",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "description": "Workspace ID",
+                    "required": true,
+                    "type": "integer"
                 }
             }
         }
